@@ -1,13 +1,12 @@
-.login-container {
+.settings-container {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fafafa;
-    color:black;
 }
 
-.login-form {
+.settings-form {
     background: #fff;
     padding: 40px 32px;
     border-radius: 16px;
@@ -15,22 +14,24 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    min-width: 320px;
+    min-width: 340px;
 }
 
-.login-form h2 {
+.settings-form h2 {
     margin-bottom: 8px;
     text-align: center;
     color: #222;
 }
 
-.login-form h4 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.settings-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #444;
+    gap: 6px;
 }
 
-.login-form input {
+.settings-form input {
     padding: 12px 16px;
     border: 1px solid #ddd;
     border-radius: 24px;
@@ -39,11 +40,11 @@
     transition: border 0.2s;
 }
 
-.login-form input:focus {
+.settings-form input:focus {
     border: 1.5px solid #ff385c;
 }
 
-.login-form button {
+.settings-form button {
     padding: 12px 0;
     border: none;
     border-radius: 24px;
@@ -55,19 +56,6 @@
     transition: background 0.2s;
 }
 
-.login-form button:hover {
+.settings-form button:hover {
     background: #e11d48;
-}
-
-.signup-btn {
-    background: #fff;
-    color: #ff385c;
-    border: 1.5px solid #ff385c;
-    margin-top: 4px;
-    transition: background 0.2s, color 0.2s;
-}
-
-.signup-btn:hover {
-    background: #ff385c;
-    color: #fff;
 }

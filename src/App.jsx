@@ -18,6 +18,7 @@ function App() {
                 <Route path="/homepage" element={<HomePage/>} />
                 <Route path="/accountsettings" element={<AccountSettings/>} />
             </Routes>
+            <a href={"/"}>login  </a>
             <a href={"/adminpage"}>adminpage  </a>
             <a href={"/hostlistingpage"}>hostlistingpage  </a>
             <a href={"/listingpage"}>listingpage  </a>
