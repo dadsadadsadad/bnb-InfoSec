@@ -1,92 +1,68 @@
-.home-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 16px;
+body {
+    background: #fafafa;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
 }
 
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
+.homepage-container {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 40px 24px 24px 24px;
+    box-sizing: border-box;
 }
 
-.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 12px;
+.homepage-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 32px;
+    letter-spacing: -1px;
 }
 
-.hero p {
-    color: #888;
-    margin-bottom: 24px;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.search-bar input {
-    padding: 10px 16px;
-    border: 1px solid #ddd;
-    border-radius: 24px;
-    min-width: 240px;
-    font-size: 1rem;
-}
-
-.search-bar button {
-    padding: 10px 24px;
-    border: none;
-    border-radius: 24px;
-    background: #ff385c;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.search-bar button:hover {
-    background: #e11d48;
-}
-
-.listings {
+.homepage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
 }
 
-.listing-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+.homepage-card {
+    display: block;
+    border-radius: 18px;
     overflow: hidden;
-    transition: transform 0.15s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.2s, transform 0.1s;
+    border: 1px solid #eee;
 }
 
-.listing-card:hover {
-    transform: translateY(-4px) scale(1.02);
+.homepage-card:hover {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    transform: translateY(-2px) scale(1.01);
 }
 
-.listing-card img {
+.homepage-card-image {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
+    display: block;
+    background: #f0f0f0;
 }
 
-.listing-info {
-    padding: 16px;
+.homepage-card-content {
+    padding: 22px 20px 18px 20px;
 }
 
-.listing-info h2 {
-    font-size: 1.2rem;
-    margin: 0 0 8px 0;
+.homepage-card-name {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
 }
 
-.listing-info p {
-    color: #666;
-    margin: 0 0 8px 0;
-}
-
-.listing-info span {
-    color: #ff385c;
-    font-weight: 600;
+.homepage-card-desc {
+    margin: 10px 0 0 0;
+    color: #717171;
+    font-size: 16px;
 }
