@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth'
 import { auth, db } from './firebase'
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore'
-import './assets/Signup.css'
+import './assets/SignUp.css'
 
 export default function Signup() {
     const nav = useNavigate()
