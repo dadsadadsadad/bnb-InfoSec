@@ -41,7 +41,7 @@ export default function Signup() {
         <div className="signup-page">
             <div className="signup-container">
                 <div className="signup-card">
-                    <h1 className="signup-title">Create your account</h1>
+                    <h1 className="signup-title">Create account</h1>
                     <p className="signup-subtitle">Sign up to start booking stays</p>
 
                     {error && <div className="signup-error" role="alert">{error}</div>}
