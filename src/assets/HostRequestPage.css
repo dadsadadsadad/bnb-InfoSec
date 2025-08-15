@@ -1,0 +1,107 @@
+:root {
+    --pink: #ff385c;
+    --pink-700: #e61e4d;
+    --pink-800: #d70466;
+    --text-900: #111827;
+    --text-700: #374151;
+    --border: #e5e7eb;
+}
+
+.hostRequest {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.hostRequest__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.hostRequest__title {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-900);
+}
+
+.hostRequest__badge {
+    border-radius: 9999px;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid var(--border);
+    background: #f9fafb;
+    color: var(--text-700);
+    text-transform: capitalize;
+}
+.hostRequest__badge--approved { background: #ecfdf5; border-color: #a7f3d0; color: #065f46; }
+.hostRequest__badge--pending { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
+.hostRequest__badge--denied  { background: #fff1f2; border-color: #fecaca; color: #b91c1c; }
+
+.hostRequest__text {
+    margin: 0 0 12px 0;
+    color: var(--text-700);
+}
+
+.hostRequest__alert {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.hostRequest__alert--approved { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; }
+.hostRequest__alert--pending  { background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; }
+.hostRequest__alert--denied   { background: #fff1f2; border: 1px solid #fecaca; color: #b91c1c; }
+.hostRequest__alert--error    { background: #fff1f2; border: 1px solid #fecaca; color: #b91c1c; }
+
+.hostRequest__form {
+    display: grid;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.hostRequest__label {
+    font-weight: 600;
+    color: var(--text-900);
+}
+
+.hostRequest__textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    resize: vertical;
+    outline: none;
+    font: inherit;
+    color: var(--text-900);
+    background: #ffffff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.hostRequest__textarea:focus {
+    border-color: var(--pink-700);
+    box-shadow: 0 0 0 3px rgba(230, 30, 77, 0.15);
+}
+
+.hostRequest__actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-top: 4px;
+}
+
+.hostRequest__primary {
+    background: var(--pink);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.06s ease, opacity 0.15s ease;
+}
+.hostRequest__primary:hover { background: var(--pink-700); }
+.hostRequest__primary:active { background: var(--pink-800); }
+.hostRequest__primary:disabled { opacity: 0.7; cursor: not-allowed; }

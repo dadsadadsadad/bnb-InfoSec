@@ -1,0 +1,135 @@
+:root {
+    --bg: #ffffff;
+    --page-bg: #f7f7f7;
+    --text: #111111;
+    --muted: #666666;
+    --border: #eaeaea;
+    --primary: #ff385c;
+    --primary-press: #e03154;
+    --radius: 12px;
+    --shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.login-page {
+    background: var(--page-bg);
+    min-height: calc(100vh - 60px);
+    display: grid;
+    place-items: center;
+    padding: 24px 16px 40px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+}
+
+.login-title {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+}
+
+.login-subtitle {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-form {
+    display: grid;
+    gap: 12px;
+}
+
+.login-group {
+    display: grid;
+    gap: 6px;
+}
+
+.login-label {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+}
+.login-input:focus {
+    border-color: #dcdcdc;
+}
+
+.login-error {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #ffeef1;
+    color: #b00020;
+    border: 1px solid #ffd2da;
+    font-size: 14px;
+}
+
+.login-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.login-btn {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+.login-btn:hover { border-color: #dcdcdc; }
+
+.login-btn-primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+.login-btn-primary:hover {
+    background: var(--primary-press);
+    border-color: var(--primary-press);
+}
+
+.link-btn {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+}
+
+.login-helper-text {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+.login-helper-link {
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-helper-link:hover { text-decoration: underline; }

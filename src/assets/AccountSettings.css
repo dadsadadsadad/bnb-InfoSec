@@ -1,0 +1,94 @@
+:root {
+    /* Airbnb-inspired palette */
+    --acct-input-bg: #ffffff;
+    --acct-input-fg: #222222;
+    --acct-input-border: #ebebeb;
+    --acct-input-border-focus: #ff385c;           /* accent */
+    --acct-input-shadow-focus: rgba(255, 56, 92, 0.28);
+    --acct-input-placeholder: #8a8a8a;
+    --acct-input-fg-disabled: #8a8a8a;
+}
+
+/* Layout */
+.acct { padding: 16px; color: var(--acct-input-fg); }
+.acct__title { margin: 0 0 12px; }
+.acct__field { display: grid; gap: 6px; margin-bottom: 12px; }
+.acct__actions { display: flex; gap: 8px; align-items: center; }
+.acct__alert { padding: 10px 12px; background:#f6ffed; border:1px solid #b7eb8f; border-radius:8px; margin-bottom:12px; }
+.acct__alert--warn { background:#fffbe6; border-color:#ffe58f; }
+.acct__divider { border: 0; border-top: 1px solid #eee; margin: 16px 0; }
+
+/* Buttons (remove blues) */
+.acct__primary {
+    background:#ff385c;        /* Airbnb accent */
+    color:#fff;
+    border:0;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.acct__primary:hover { background:#e03150; }
+.acct__primary:disabled { opacity:.6; cursor:not-allowed; }
+
+.acct__danger {
+    background:#d9363e;        /* danger tone */
+    color:#fff;
+    border:0;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.acct__danger:hover { background:#c53034; }
+
+/* Unified input styling */
+.acct__input,
+.acct input[type="text"],
+.acct input[type="email"],
+.acct input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 8px 10px;
+    border: 1px solid var(--acct-input-border);
+    border-radius: 8px;
+    background: var(--acct-input-bg);
+    color: var(--acct-input-fg);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Placeholder */
+.acct__input::placeholder { color: var(--acct-input-placeholder); }
+
+/* Focus (accent, not blue) */
+.acct__input:focus {
+    border-color: var(--acct-input-border-focus);
+    box-shadow: 0 0 0 3px var(--acct-input-shadow-focus);
+}
+
+/* Disabled & readOnly */
+.acct__input:disabled,
+.acct__input[readonly] {
+    background: var(--acct-input-bg);
+    color: var(--acct-input-fg-disabled);
+    border-color: var(--acct-input-border);
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* Autofill normalization */
+.acct__input:-webkit-autofill,
+.acct__input:-webkit-autofill:hover,
+.acct__input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--acct-input-fg);
+    -webkit-box-shadow: 0 0 0px 1000px var(--acct-input-bg) inset;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+/* High contrast/focus visibility */
+.acct__input:focus-visible {
+    outline: 2px solid var(--acct-input-border-focus);
+    outline-offset: 1px;
+}

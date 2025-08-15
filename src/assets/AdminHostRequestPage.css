@@ -1,0 +1,102 @@
+.adminRequests {
+    padding: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #111;
+}
+
+.adminRequests__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.adminRequests__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.adminRequests__error {
+    background: #fff2f0;
+    color: #a8071a;
+    border: 1px solid #ffa39e;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.adminRequests__empty,
+.adminRequests__notice {
+    color: #555;
+    padding: 10px 12px;
+}
+
+.adminRequests__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.adminRequests__item {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+    background: #fff;
+}
+
+.adminRequests__name {
+    font-weight: 700;
+}
+
+.adminRequests__email {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.adminRequests__message {
+    margin-top: 8px;
+    white-space: pre-wrap;
+    color: #222;
+}
+
+.adminRequests__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn {
+    border: 0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn--approve {
+    background: #52c41a;
+    color: #fff;
+}
+
+.btn--approve:hover {
+    background: #3fa411;
+}
+
+.btn--deny {
+    background: #fa541c;
+    color: #fff;
+}
+
+.btn--deny:hover {
+    background: #e34b18;
+}
+
+.adminRequests--unauthorized .adminRequests__notice,
+.adminRequests--loading .adminRequests__notice {
+    text-align: center;
+}

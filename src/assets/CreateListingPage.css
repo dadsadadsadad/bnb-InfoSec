@@ -1,0 +1,126 @@
+.create-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.create-title {
+    margin: 8px 0 16px;
+    font-weight: 700;
+    color: #232323; /* deep pink title */
+}
+
+.create-card {
+    background: #fff;
+    border: 1px solid #d3d3d3; /* light pink border */
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 20px rgba(51, 51, 51, 0.08); /* subtle pink shadow */
+}
+
+.form-grid {
+    display: grid;
+    gap: 14px;
+}
+
+.field label {
+    display: block;
+    font-size: 0.9rem;
+    color: #232323;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d3; /* soft pink */
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 120ms ease, box-shadow 120ms ease, background-color 120ms ease, color 120ms ease;
+    background: #fff;          /* ensure white background */
+    color: #111827;            /* force dark text so it is visible */
+    caret-color: #ec4899;      /* pink caret */
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #9ca3af; /* gray placeholder for contrast */
+    opacity: 1;
+}
+
+/* Fix Chromium autofill making text unreadable */
+.field input:-webkit-autofill,
+.field textarea:-webkit-autofill {
+    -webkit-text-fill-color: #111827;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: #ec4899; /* pink focus */
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.25);
+}
+
+.hint {
+    font-size: 0.85rem;
+    color: #9d174d;
+    margin-top: 4px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.btn {
+    appearance: none;
+    border: 1px solid #ec4899;   /* pink */
+    background: #ec4899;         /* pink */
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 120ms ease, border-color 120ms ease, opacity 120ms ease, transform 80ms ease;
+}
+
+.btn:hover {
+    background: #db2777; /* darker pink */
+    border-color: #db2777;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.btn.secondary {
+    background: #fdf2f8;     /* very light pink */
+    color: #9d174d;
+    border-color: #fbcfe8;
+}
+
+.btn.secondary:hover {
+    background: #fce7f3;
+}
+
+.error {
+    color: #be123c; /* rose-600 */
+    margin: 8px 0 0;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .create-card { padding: 12px; }
+    .actions { flex-direction: column; }
+    .btn { width: 100%; }
+}
