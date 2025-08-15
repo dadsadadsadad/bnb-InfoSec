@@ -133,7 +133,7 @@ export default function ListingPage() {
                 <Link to={-1} className="back-link">Back</Link>
                 <h1 className="title">{listing.title}</h1>
                 <div className="meta">
-                    <span className="price">{fmt(nightly)} <small>/ night</small></span>
+                    <span className="price">${(nightly)} <small>/ night</small></span>
                     {createdAt && <span className="dot">•</span>}
                     {createdAt && <span className="created">Created {createdAt}</span>}
                 </div>
@@ -168,12 +168,12 @@ export default function ListingPage() {
 
                     <div className="reserve-summary">
                         <div className="line">
-                            <span>{nights || 0} night{nights === 1 ? '' : 's'} × {fmt(nightly)}</span>
-                            <span>{fmt(nights > 0 ? nights * nightly : 0)}</span>
+                            <span>{nights || 0} night{nights === 1 ? '' : 's'} × ${(nightly)}</span>
+                            <span>${(nights > 0 ? nights * nightly : 0)}</span>
                         </div>
                         <div className="line total">
                             <strong>Total</strong>
-                            <strong>{fmt(totalPrice)}</strong>
+                            <strong>${(totalPrice)}</strong>
                         </div>
                     </div>
 
