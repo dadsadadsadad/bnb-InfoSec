@@ -19,6 +19,7 @@ import AuthError from './AuthError.jsx'
 import CreateListingPage from './CreateListingPage.jsx'
 import HostRequestPage from './HostRequestPage.jsx'
 import VerifyEmail from './VerifyEmail.jsx'
+import Admin from './Admin.jsx'
 
 export default function App() {
     const [ready, setReady] = useState(false)
