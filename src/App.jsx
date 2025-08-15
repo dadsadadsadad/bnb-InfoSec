@@ -57,6 +57,7 @@ export default function App() {
 
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/admin" element={<AdminPage />} />
                 <Route
                     path="/verify-email"
                     element={!ready ? null : (user ? <VerifyEmail /> : <Navigate to="/login" replace />)}
@@ -87,8 +88,8 @@ export default function App() {
                     element={!ready ? null : (user && isHost ? <CreateListingPage /> : <Navigate to="/homepage" replace />)}
                 />
 
-                {/* admin routes */}
-                {/* check first if admin using adminroute */}
+                {/* admin.jsx routes */}
+                {/* check first if admin.jsx using adminroute */}
                 <Route element={<AdminRoute />}>
                     <Route path="/adminpage" element={<AdminPage />} />
                 </Route>

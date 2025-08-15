@@ -30,7 +30,7 @@ export default function Navbar() {
                 if (snap.exists()) host = !!snap.data()?.isHost
             } catch {}
 
-            //if logged in, check if admin
+            //if logged in, check if admin.jsx
             const token = await getIdTokenResult(u)
             const admin = !!token.claims?.admin
 
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <div className="nav-links">
                     <button className="nav-link" onClick={goHome}>Home</button>
 
-                    {/* if admin, show admin links in navbar */}
+                    {/* if admin.jsx, show admin.jsx links in navbar */}
                     {user && isAdmin ? (
                         <>
                             <button className="nav-link" onClick={goAdmin}>Admin</button>

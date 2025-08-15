@@ -26,7 +26,7 @@ export default function AdminHostRequestPage() {
                 setLoading(false)
                 return
             }
-            //check if user is admin
+            //check if user is admin.jsx
             const token = await getIdTokenResult(u, true)
             setIsAdmin(!!token.claims?.admin)
             setReady(true)
@@ -75,7 +75,7 @@ export default function AdminHostRequestPage() {
                 //gets the uid of the user who sent appeal, then set status to host
                 const userRef = doc(db, 'users', appeal.uid)
                 batch.set(userRef, { isHost: true }, { merge: true })
-                //update the status of the appeal to approve and add time of review and uid of admin
+                //update the status of the appeal to approve and add time of review and uid of admin.jsx
                 batch.update(appealRef, {
                     status: 'approved',
                     reviewedAt: serverTimestamp(),

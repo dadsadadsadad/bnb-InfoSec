@@ -15,7 +15,7 @@ export function useAdmin() {
                 setLoading(false)
                 return }
             try {
-                //check token to see if user is admin
+                //check token to see if user is admin.jsx
                 const token = await getIdTokenResult(u)
                 setIsAdmin(!!token.claims.admin)
             } finally {

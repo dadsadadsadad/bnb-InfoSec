@@ -7,6 +7,6 @@ export default function AdminRoute() {
     if (loading)
         return null
 
-    //if not admin, go to home page
+    //if not admin.jsx, go to home page
     return isAdmin ? <Outlet /> : <Navigate to="/" replace />
 }
