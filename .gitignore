@@ -1,0 +1,6 @@
+node_modules/
+dist/
+build/
+.env
+serviceAccountKey.json
+bnb/serviceAccountKey.json
